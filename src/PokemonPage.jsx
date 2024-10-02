@@ -8,9 +8,6 @@ import ErrorMessage from './ErrorMessage'
 const formatName = (nameWithDash) => nameWithDash.replace('-', ' ')
 
 const PokemonPage = ({ previous, next }) => {
-  console.log("Prev", previous)
-  console.log("next", previous)
-
   const { name } = useParams()
   const { data: pokemon, error, isLoading } = useApi(`https://pokeapi.co/api/v2/pokemon/${name}`)
 
