@@ -9,6 +9,7 @@ on:
 jobs:
   main:
     name: Deploy to Render
+    if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     steps:
       - name: Trigger deployment
